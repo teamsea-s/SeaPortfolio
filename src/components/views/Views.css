@@ -1,0 +1,37 @@
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.8rem 0;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1D8CA1, #4ECDC4, #1D8CA1);
+    border-radius: 2px;
+    animation: expandUnderline 1.5s ease-out 0.1s forwards;
+    box-shadow: 0 2px 8px rgba(29, 140, 161, 0.3);
+}
+
+@keyframes expandUnderline {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        width: 120px;
+        opacity: 1;
+    }
+}
