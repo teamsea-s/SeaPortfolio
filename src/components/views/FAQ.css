@@ -1,0 +1,175 @@
+.faq-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    padding: 5rem 0;
+    position: relative;
+    background: #0B2F48;
+
+    background-image: url('./assets/content/Ship.jpeg');
+    background-size: 100vw auto; /* Use full viewport width, auto height */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #d8d8d8;
+    text-align: center;
+    margin-top: 0.5rem;
+    max-width: 800px;
+}
+
+.quick-access-section {
+    background: #F8FAFC;
+    color: #0B2F48;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.quick-access-header {
+    margin-bottom: 3rem;
+}
+
+.quick-access-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0B2F48;
+    margin-bottom: 1rem;
+}
+
+.quick-access-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quick-access-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.access-card {
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.access-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(11, 47, 72, 0.15);
+    border-color: #1D8CA1;
+}
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #174c57, #1D8CA1);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.access-card:hover .card-icon {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(29, 140, 161, 0.3);
+}
+
+.access-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0B2F48;
+    margin-bottom: 1rem;
+}
+
+.access-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.card-button {
+    background: linear-gradient(45deg, #174c57, #1D8CA1);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-button:hover {
+    background: linear-gradient(45deg, #0B2F48, #1D8CA1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(29, 140, 161, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .quick-access-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .quick-access-header h2 {
+        font-size: 2rem;
+    }
+    
+    .access-card {
+        padding: 1.5rem;
+    }
+}
+
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 15rem;
+}
+
+.faq-section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.faq-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.faq-categorie-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0B2F48;
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.faq-categorie-title span {
+    padding-top: 5px;
+}

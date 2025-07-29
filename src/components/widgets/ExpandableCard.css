@@ -1,0 +1,59 @@
+.expandable-card {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    border: #cccccc 1px solid;
+}
+
+.expandable-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.expandable-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.expandable-header:hover {
+    background-color: #f8f9fa;
+}
+
+.expandable-question {
+    color: #161616;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.expandable-arrow {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.expandable-content.expanded {
+    max-height: 300px;
+}
+
+.expandable-answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: #161616;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}

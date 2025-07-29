@@ -1,4 +1,5 @@
 import "./About.css";
+import "./Views.css";
 
 function About() {
     return(

@@ -1,4 +1,5 @@
 import "./News.css";
+import "./Views.css";
 
 function News() {
     return(

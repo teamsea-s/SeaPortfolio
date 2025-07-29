@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import "./Contact.css";
 import "./Views.css"
+import ExpandableCard from "../widgets/ExpandableCard";
+import { useNavigate } from "react-router-dom";
 
 function Contact() {
     const [animate, setAnimate] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Trigger animation when component mounts
@@ -20,6 +23,26 @@ function Contact() {
     return(
         <div className="contact">
             <span className="title">Contact</span>
+            <div className="contact-hero">
+                <div className="hero-content">
+                    <h2>Get in Touch with Maritime Experts</h2>
+                    <p>Ready to navigate your next maritime challenge? Our experienced team is here to provide tailored solutions for your shipping, logistics, and port operation needs.</p>
+                </div>
+                <div className="hero-stats">
+                    <div className="stat-item">
+                        <span className="stat-number">25+</span>
+                        <span className="stat-label">Years Experience</span>
+                    </div>
+                    <div className="stat-item">
+                        <span className="stat-number">500+</span>
+                        <span className="stat-label">Successful Projects</span>
+                    </div>
+                    <div className="stat-item">
+                        <span className="stat-number">24/7</span>
+                        <span className="stat-label">Support Available</span>
+                    </div>
+                </div>
+            </div>
             <div className="form-cards">
                 <div className={`card ${animate ? 'animate-left' : ''}`}>
                     <span className="card-title">Contact Us</span>
@@ -34,25 +57,34 @@ function Contact() {
                     <span className="card-title">Contact Info</span>
                     <div className="contact-info">
                         <div className="info-row">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="#0B2F48"/>
                             </svg>
                             <span>+56 9 9999 9999</span>
                         </div>
                         <div className="info-row">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="#0B2F48"/>
                                 <polyline points="22,6 12,13 2,6" fill="none" stroke="white" strokeWidth="2"/>
                             </svg>
                             <span>team@sea-s.com</span>
                         </div>
                         <div className="info-row">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="#0B2F48"/>
                                 <circle cx="12" cy="10" r="3" fill="white"/>
                             </svg>
                             <span>Valparaíso, Chile</span>
                         </div>
+                        <div className="info-row">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="4" width="18" height="6" rx="2" ry="2" fill="#0B2F48"/>
+                                <line x1="16" y1="2" x2="16" y2="6" stroke="#0B2F48" strokeWidth="2"/>
+                                <line x1="8" y1="2" x2="8" y2="6" stroke="#0B2F48" strokeWidth="2"/>
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="#0B2F48" strokeWidth="2"/>
+                            </svg>
+                                <span>Mon-Fri: 9:00 AM - 5:00 PM (GMT-4)</span>
+                            </div>
                     </div>
                     <div className="map-container">
                         <iframe
@@ -68,6 +100,42 @@ function Contact() {
                 </div>
             </div>
             <span className="title">Other Important Features</span>
+            <div className="faq-container">
+                <ExpandableCard 
+                    question="What safety regulations do you follow?"
+                    answer="We strictly adhere to international maritime safety standards including SOLAS, MARPOL, and ISM Code. Our vessels undergo regular inspections and our crew receives continuous safety training to ensure the highest level of maritime safety."
+                />
+                <ExpandableCard
+                    question="What types of vessels do you operate?"
+                    answer="We operate a diverse fleet including container ships, bulk carriers, tankers, and specialized cargo vessels. All our vessels are maintained to the highest standards and equipped with modern navigation and communication systems."
+                />
+                <ExpandableCard 
+                    question="How do you ensure environmental compliance?"
+                    answer="Environmental protection is a core value. We comply with all IMO environmental regulations, use eco-friendly technologies, and continuously monitor our emissions. Our goal is to minimize our environmental footprint while maintaining operational efficiency."
+                />
+                <div style={{ display: "flex", justifyContent:"end", marginBottom: '2rem' }}>
+                    <button className="learn-more" onClick={() => navigate("/faq")}>
+                        <span>Learn more</span>
+                        <svg 
+                        className="expandable-arrow"
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        xmlns="http://www.w3.org/2000/svg"
+
+                        >
+                            <path 
+                                d="M9 18L15 12L9 6" 
+                                stroke="white" 
+                                strokeWidth="2" 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }

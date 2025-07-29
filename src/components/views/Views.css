@@ -35,3 +35,25 @@
         opacity: 1;
     }
 }
+
+.learn-more {
+    display: flex;
+    align-items: center;
+    background: #0B2F48;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+
+.learn-more:hover {
+    background: transparent;
+    color: #0B2F48;
+    border-color: #0B2F48;
+
+    path {
+        stroke: #0B2F48;
+    }
+}

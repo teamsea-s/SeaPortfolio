@@ -8,6 +8,7 @@ import About from "./components/views/About";
 import News from "./components/views/News";
 import Services from "./components/views/Services";
 import Contact from "./components/views/Contact";
+import FAQ from "./components/views/FAQ";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/news" element={<News />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/faq" element={<FAQ />} />
               </Routes>
             </div>
           </div>

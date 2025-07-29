@@ -1,0 +1,60 @@
+.language-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.language-switcher:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.language-switcher.clicked {
+    transform: scale(0.95);
+}
+
+.language-content {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.globe-icon {
+    position: absolute;
+    color: #d8d8d8;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(0);
+}
+
+.globe-icon.slide-up {
+    transform: translateY(-25px);
+    opacity: 0;
+}
+
+.language-text {
+    position: absolute;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(25px);
+    opacity: 0;
+}
+
+.language-text.slide-down {
+    transform: translateY(0);
+    opacity: 1;
+}

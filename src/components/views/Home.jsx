@@ -1,4 +1,5 @@
 import "./Home.css";
+import "./Views.css";
 
 function Home() {
     return(
