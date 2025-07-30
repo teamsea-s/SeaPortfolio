@@ -14,10 +14,10 @@
     align-items: center;
     justify-content: center;
     gap: 0rem;
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
     position: relative;
     background: #0B2F48;
-    min-height: 60vh;
+    /* min-height: 60vh; */
     overflow: hidden;
 }
 
@@ -66,15 +66,6 @@
 .faq-hero > * {
     position: relative;
     z-index: 3;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #d8d8d8;
-    text-align: center;
-    margin-top: 0.5rem;
-    max-width: 800px;
-    padding: 0 1rem;
 }
 
 .quick-access-section {
@@ -237,10 +228,6 @@
     .faq-hero {
         padding: 4rem 2rem;
     }
-    
-    .subtitle {
-        font-size: 1.1rem;
-    }
 }
 
 /* Tablet Responsive - 768px and below */
@@ -250,10 +237,6 @@
         min-height: 50vh;
     }
     
-    .subtitle {
-        font-size: 1rem;
-        padding: 0 0.5rem;
-    }
     
     .quick-access-section {
         padding: 3rem 1.5rem;
@@ -302,10 +285,6 @@
         min-height: 40vh;
     }
     
-    .subtitle {
-        font-size: 0.9rem;
-        padding: 0;
-    }
     
     .quick-access-section {
         padding: 2rem 1rem;
@@ -411,9 +390,6 @@
         padding: 6rem 2rem;
     }
     
-    .subtitle {
-        font-size: 1.3rem;
-    }
 }
 
 /* High DPI screens */

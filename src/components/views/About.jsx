@@ -67,11 +67,12 @@ function About() {
     return(
         <div className="about">
             {/* Hero Section */}
-            <div className="about-hero">
-                <div className="about-hero-content">
-                    <span className="title">About Sea-S</span>
-                    <p className="about-hero-subtitle">
-                        Leading the maritime industry with innovation, expertise, and unwavering commitment to excellence
+            <div className="page-hero page-hero--large">
+                {/* <img src="/assets/logos/content/FAQ.svg" width="65rem" alt="FAQ" className="faq-image" /> */}
+                <div className="page-hero-content">
+                    <h1 className="title">About Sea-S</h1>
+                    <p className="subtitle">
+                    Leading the maritime industry with innovation, expertise, and unwavering commitment to excellence
                     </p>
                 </div>
             </div>

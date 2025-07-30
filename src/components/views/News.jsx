@@ -184,10 +184,11 @@ The report also highlights challenges including port congestion, environmental r
     return (
         <div className="news">
             {/* Hero Section */}
-            <div className="news-hero">
-                <div className="news-hero-content">
+            <div className="page-hero page-hero--large">
+                {/* <img src="/assets/logos/content/FAQ.svg" width="65rem" alt="FAQ" className="faq-image" /> */}
+                <div className="page-hero-content">
                     <h1 className="title">Industry News & Company Updates</h1>
-                    <p className="news-subtitle">
+                    <p className="subtitle">
                         Stay informed with the latest developments in maritime technology, industry trends, and Sea-S company updates
                     </p>
                 </div>

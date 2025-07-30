@@ -6,6 +6,7 @@
     position: relative;
     display: inline-block;
     width: 100%;
+    line-height: 1.5;
 }
 
 .title::after {
@@ -56,4 +57,547 @@
     path {
         stroke: #0B2F48;
     }
+}
+
+/* Existing styles... */
+
+/* ===============================
+   UNIFIED HERO COMPONENT
+   =============================== */
+
+/* Base Hero Styles */
+.page-hero {
+    background: linear-gradient(135deg, #0B2F48 0%, #1a4a5c 100%);
+    color: white;
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/assets/content/Ship.jpeg') center/cover;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #4ECDC4, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    line-height: 1.2;
+}
+
+.page-hero-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d8d8d8;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #d8d8d8;
+    text-align: center;
+    margin-top: 0.5rem;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+/* Hero Variants */
+.page-hero--large {
+    padding: 6rem 2rem 4rem;
+}
+
+.page-hero--large .page-hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-hero--large .page-hero-subtitle {
+    font-size: 1.3rem;
+}
+
+.page-hero--compact {
+    padding: 3rem 2rem 2rem;
+}
+
+.page-hero--compact .page-hero-title {
+    font-size: 2.5rem;
+}
+
+.page-hero--compact .page-hero-subtitle {
+    font-size: 1.1rem;
+}
+
+/* Background Image Variants */
+.page-hero--news::before {
+    opacity: 0.45;
+}
+
+.page-hero--about::before {
+    opacity: 0.6;
+}
+
+.page-hero--services::before {
+    opacity: 0.5;
+}
+
+.page-hero--faq::before {
+    opacity: 0.3;
+}
+
+/* Custom Background Images */
+.page-hero--custom-bg::before {
+    background-image: var(--hero-bg-image);
+}
+
+/* Text Alignment Variants */
+.page-hero--left {
+    text-align: left;
+}
+
+.page-hero--left .page-hero-content {
+    margin: 0;
+    max-width: 1200px;
+}
+
+.page-hero--right {
+    text-align: right;
+}
+
+.page-hero--right .page-hero-content {
+    margin: 0 0 0 auto;
+    max-width: 1200px;
+}
+
+/* Color Variants */
+.page-hero--dark {
+    background: linear-gradient(135deg, #0B2F48 0%, #1a3a4a 100%);
+}
+
+.page-hero--light {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #0B2F48;
+}
+
+.page-hero--light .page-hero-title {
+    background: linear-gradient(45deg, #1D8CA1, #0B2F48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-hero--light .page-hero-subtitle {
+    color: #666;
+}
+
+.page-hero--light::before {
+    display: none;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+/* Extra Large Screens - 1400px and above */
+@media (min-width: 1400px) {
+    .page-hero {
+        padding: 5rem 2rem 4rem;
+    }
+    
+    .page-hero--large {
+        padding: 8rem 2rem 6rem;
+    }
+    
+    .page-hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .page-hero--large .page-hero-title {
+        font-size: 4rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .page-hero--large .page-hero-subtitle {
+        font-size: 1.4rem;
+    }
+    .subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+/* Large Screens - 1200px to 1399px */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .page-hero {
+        padding: 4.5rem 2rem 3.5rem;
+    }
+    
+    .page-hero--large {
+        padding: 7rem 2rem 5rem;
+    }
+    
+    .page-hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .page-hero--large .page-hero-title {
+        font-size: 3.8rem;
+    }
+    .subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablet Landscape - 1024px and below */
+@media (max-width: 1024px) {
+    .page-hero {
+        padding: 4rem 2rem 3rem;
+    }
+    
+    .page-hero--large {
+        padding: 5rem 2rem 4rem;
+    }
+    
+    .page-hero--compact {
+        padding: 2.5rem 2rem 2rem;
+    }
+    
+    .page-hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .page-hero--large .page-hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .page-hero--compact .page-hero-title {
+        font-size: 2.3rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .page-hero--large .page-hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablet Portrait - 768px and below */
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 3rem 1.5rem 2rem;
+    }
+    
+    .page-hero--large {
+        padding: 4rem 1.5rem 3rem;
+    }
+    
+    .page-hero--compact {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    
+    .page-hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .page-hero--large .page-hero-title {
+        font-size: 2.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .page-hero--compact .page-hero-title {
+        font-size: 2rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .page-hero--large .page-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .page-hero--compact .page-hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    /* Ensure left/right alignment works on mobile */
+    .page-hero--left,
+    .page-hero--right {
+        text-align: center;
+    }
+}
+
+/* Mobile Landscape - 640px and below */
+@media (max-width: 640px) {
+    .page-hero {
+        padding: 2.5rem 1rem 1.8rem;
+    }
+    
+    .page-hero--large {
+        padding: 3rem 1rem 2rem;
+    }
+    
+    .page-hero--compact {
+        padding: 1.8rem 1rem 1.3rem;
+    }
+    
+    .page-hero-title {
+        font-size: 2rem;
+    }
+    
+    .page-hero--large .page-hero-title {
+        font-size: 2.4rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .page-hero--compact .page-hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .page-hero--large .page-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .page-hero--compact .page-hero-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Portrait - 480px and below */
+@media (max-width: 480px) {
+    .page-hero {
+        padding: 2rem 1rem 1.5rem;
+    }
+    
+    .page-hero--large {
+        padding: 2.5rem 1rem 2rem;
+    }
+    
+    .page-hero--compact {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .page-hero-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .page-hero--large .page-hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .page-hero--compact .page-hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    
+    .subtitle {
+        font-size: 0.9rem;
+        padding: 0;
+    }
+    
+    .page-hero--large .page-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .page-hero--compact .page-hero-subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra Small Mobile - 320px and below */
+@media (max-width: 320px) {
+    .page-hero {
+        padding: 1.5rem 0.8rem 1rem;
+    }
+    
+    .page-hero--large {
+        padding: 2rem 0.8rem 1.5rem;
+    }
+    
+    .page-hero--compact {
+        padding: 1.2rem 0.8rem 0.8rem;
+    }
+    
+    .page-hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .page-hero--large .page-hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-hero--compact .page-hero-title {
+        font-size: 1.4rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .page-hero--large .page-hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .page-hero--compact .page-hero-subtitle {
+        font-size: 0.75rem;
+    }
+}
+
+/* ===============================
+   ACCESSIBILITY & PERFORMANCE
+   =============================== */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .page-hero-title {
+        animation: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .page-hero {
+        background: #000;
+        color: #fff;
+    }
+    
+    .page-hero::before {
+        opacity: 0.1;
+    }
+    
+    .page-hero-title {
+        background: #fff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .page-hero--light {
+        background: #fff;
+        color: #000;
+    }
+    
+    .page-hero--light .page-hero-title {
+        background: #000;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+/* Focus Management */
+.page-hero:focus-within {
+    outline: 2px solid #4ECDC4;
+    outline-offset: 4px;
+}
+
+/* Print Styles */
+@media print {
+    .page-hero::before {
+        display: none;
+    }
+    
+    .page-hero {
+        background: #fff !important;
+        color: #000 !important;
+        padding: 2rem 1rem !important;
+    }
+    
+    .page-hero-title {
+        background: #000 !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+    }
+}
+
+/* ===============================
+   UTILITY CLASSES
+   =============================== */
+
+/* Hero with custom padding */
+.page-hero--no-padding-top {
+    padding-top: 0;
+}
+
+.page-hero--no-padding-bottom {
+    padding-bottom: 0;
+}
+
+.page-hero--extra-padding {
+    padding: 6rem 2rem 5rem;
+}
+
+/* Hero with custom z-index */
+.page-hero--high-z {
+    z-index: 100;
+}
+
+.page-hero--low-z {
+    z-index: 1;
+}
+
+/* Hero with custom max-width */
+.page-hero--narrow .page-hero-content {
+    max-width: 600px;
+}
+
+.page-hero--wide .page-hero-content {
+    max-width: 1000px;
+}
+
+.page-hero--full .page-hero-content {
+    max-width: none;
 }

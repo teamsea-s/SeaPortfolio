@@ -22,7 +22,15 @@ function Contact() {
 
     return(
         <div className="contact">
-            <span className="title">Contact</span>
+            <div className="page-hero page-hero--large">
+                {/* <img src="/assets/logos/content/FAQ.svg" width="65rem" alt="FAQ" className="faq-image" /> */}
+                <div className="page-hero-content">
+                    <h1 className="title">Contact</h1>
+                    <p className="subtitle">
+                    Ready to optimize your maritime operations? Get in touch with our experts and discover how we can help you achieve your goals.
+                    </p>
+                </div>
+            </div>
             <div className="contact-hero">
                 <div className="hero-content">
                     <h2>Get in Touch with Maritime Experts</h2>

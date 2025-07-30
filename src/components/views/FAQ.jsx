@@ -7,12 +7,14 @@ function FAQ() {
     const navigate = useNavigate();
     return(
         <div className="faq">
-            <div className="faq-hero">
-                <img src="/assets/logos/content/FAQ.svg" width="65rem" alt="FAQ" className="faq-image" />
-                <span className="title">Frequently Asked Questions</span>
-                <span className="subtitle">
-                    Find answers to common questions about our maritime services, regulations, and operational procedures.
-                </span>
+            <div className="page-hero page-hero--large">
+                {/* <img src="/assets/logos/content/FAQ.svg" width="65rem" alt="FAQ" className="faq-image" /> */}
+                <div className="page-hero-content">
+                    <h1 className="title">Frequently Asked Questions</h1>
+                    <p className="subtitle">
+                        Find answers to common questions about our maritime services, regulations, and operational procedures.
+                    </p>
+                </div>
             </div>
             
             <div className="quick-access-section">
