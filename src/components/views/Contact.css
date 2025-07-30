@@ -22,6 +22,10 @@
     background-attachment: fixed;
 }
 
+.white {
+    color: white;
+}
+
 .card {
     background: white;
     color: #161616;
@@ -124,14 +128,14 @@
     margin-bottom: 1.4rem;
 }
 
-.info-row {
+.contact-info-row {
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 1.1rem;
 }
 
-.info-row svg {
+.contact-info-row svg {
     flex-shrink: 0;
 }
 
