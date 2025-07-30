@@ -219,10 +219,6 @@
     display: none;
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-   =============================== */
-
 /* Extra Large Screens - 1400px and above */
 @media (min-width: 1400px) {
     .page-hero {

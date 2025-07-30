@@ -1,0 +1,400 @@
+.not-found-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.not-found-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="1" fill="%234ECDC4" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    pointer-events: none;
+}
+
+.not-found-container {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.not-found-content {
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(78, 205, 196, 0.2);
+    margin-bottom: 2rem;
+}
+
+.not-found-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    overflow: visible;
+    padding-top: 1rem; /* Add top padding to prevent clipping */
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #0B2F48, #1D8CA1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2; /* Increase from 0.9 to 1.2 */
+    /* margin-bottom: 1rem; */
+    /* padding: 1rem 0; Add padding top and bottom */
+    display: block;
+    overflow: visible;
+    /* Fallback for browsers that don't support background-clip */
+    /* color: #1D8CA1; */
+}
+
+.ship-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.not-found-text {
+    margin-bottom: 2rem;
+}
+
+.not-found-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0B2F48;
+    margin-bottom: 1rem;
+}
+
+.not-found-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #64748b;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.not-found-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0B2F48, #1D8CA1);
+    color: white;
+    box-shadow: 0 8px 32px rgba(29, 140, 161, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0B2F48, #1D8CA1);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(29, 140, 161, 0.4);
+}
+
+.btn-secondary {
+    background: white;
+    color: #1D8CA1;
+    border: 2px solid #1D8CA1;
+}
+
+.btn-secondary:hover {
+    background: #1D8CA1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.helpful-links {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.helpful-links h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #0B2F48;
+    margin-bottom: 1.5rem;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.5rem 1rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #0B2F48;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.link-card:hover {
+    background: linear-gradient(135deg, #0B2F48, #1D8CA1);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(29, 140, 161, 0.3);
+}
+
+.link-card svg {
+    transition: all 0.3s ease;
+}
+
+.link-card:hover svg {
+    transform: scale(1.1);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+/* Tablet Portrait - 768px and below */
+@media (max-width: 768px) {
+    .not-found-page {
+        padding: 1rem;
+    }
+    
+    .not-found-content {
+        padding: 2rem;
+    }
+    
+    .error-code {
+        font-size: 6rem;
+    }
+    
+    .not-found-title {
+        font-size: 2rem;
+    }
+    
+    .not-found-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .not-found-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .helpful-links {
+        padding: 1.5rem;
+    }
+    
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    
+    .link-card {
+        padding: 1rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Portrait - 480px and below */
+@media (max-width: 480px) {
+    .not-found-page {
+        padding: 0.5rem;
+    }
+    
+    .not-found-content {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+    
+    .error-code {
+        font-size: 4.5rem;
+    }
+    
+    .ship-icon svg {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .not-found-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .not-found-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .helpful-links {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+    
+    .helpful-links h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .links-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    
+    .link-card {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: left;
+    }
+    
+    .link-card svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+}
+
+/* Extra Small Mobile - 320px and below */
+@media (max-width: 320px) {
+    .error-code {
+        font-size: 3.5rem;
+    }
+    
+    .not-found-title {
+        font-size: 1.4rem;
+    }
+    
+    .not-found-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+        min-width: auto;
+    }
+    
+    .link-card {
+        padding: 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===============================
+   ACCESSIBILITY & ANIMATIONS
+   =============================== */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .ship-icon {
+        animation: none;
+    }
+    
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .link-card:hover {
+        transform: none;
+    }
+}
+
+/* Focus States */
+.btn-primary:focus,
+.btn-secondary:focus,
+.link-card:focus {
+    outline: 3px solid #4ECDC4;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .error-code {
+        background: black;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .not-found-content,
+    .helpful-links {
+        border: 2px solid black;
+    }
+}
+
+/* Loading State Animation */
+.not-found-content {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.helpful-links {
+    animation: fadeInUp 0.8s ease-out;
+}

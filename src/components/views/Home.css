@@ -1,0 +1,343 @@
+.home {
+    width: 100%;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Hero Section --- */
+.home-hero-section {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url('/assets/content/Ship.jpeg') no-repeat center center/cover;
+}
+
+.home-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(11, 47, 72, 0.7);
+}
+
+.home-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.home-hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.home-hero-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.home-hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* --- General Section Styling --- */
+.home-services-overview, .home-innovation, .home-cta-section {
+    padding: 5rem 0;
+}
+
+.home-section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0B2F48;
+    margin-bottom: 1rem;
+}
+
+.home-section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Services Overview --- */
+.home-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.home-service-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #f1f5f9;
+}
+
+.home-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.home-service-icon {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(45deg, #0B2F48, #1D8CA1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(11, 47, 72, 0.2);
+}
+
+.home-service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0B2F48;
+    margin-bottom: 1rem;
+}
+
+.home-service-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* --- Why Choose Us Section --- */
+.home-why-choose-us {
+    background: linear-gradient(135deg, #0B2F48, #1D8CA1);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.home-section-title-light {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.home-section-subtitle-light {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.home-features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.home-feature-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-feature-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4ECDC4;
+}
+
+.home-feature-label {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* --- Innovation Section --- */
+.home-innovation {
+    background-color: #f8fafc;
+}
+
+.home-innovation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.home-innovation-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(45deg, #0B2F48, #1D8CA1);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.home-innovation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.home-innovation-icon {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto 1.5rem;
+    color: #1D8CA1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-innovation-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0B2F48;
+    margin-bottom: 1rem;
+}
+
+.home-innovation-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* --- CTA Section --- */
+.home-cta-section {
+    background: #eef7f7;
+    text-align: center;
+}
+
+.home-cta-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #0B2F48;
+    margin-bottom: 1rem;
+}
+
+.home-cta-subtitle {
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+/* --- Buttons --- */
+.home-btn-primary, .home-btn-secondary, .home-btn-primary-light, .home-btn-primary-large {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-btn-primary {
+    background: linear-gradient(45deg, #0B2F48, #1D8CA1);
+    color: white;
+}
+.home-btn-primary:hover {
+    background: linear-gradient(45deg, #1D8CA1, #4ECDC4);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(11, 47, 72, 0.3);
+}
+
+.home-btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+.home-btn-secondary:hover {
+    background: linear-gradient(45deg, #0B2F48, #1D8CA1);
+    color: white;
+    border-color: transparent;
+}
+
+.home-btn-primary-light {
+    background: white;
+    color: #0B2F48;
+    border: 2px solid white;
+}
+.home-btn-primary-light:hover {
+    background: linear-gradient(45deg, #0B2F48, #1D8CA1);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.home-btn-primary-large {
+    background: linear-gradient(45deg, #0B2F48, #1D8CA1);
+    color: white;
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+}
+.home-btn-primary-large:hover {
+    background: linear-gradient(45deg, #1D8CA1, #4ECDC4);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(11, 47, 72, 0.3);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .home-hero-title { font-size: 3rem; }
+    .home-hero-subtitle { font-size: 1.2rem; }
+    .home-services-grid { grid-template-columns: 1fr; }
+    .home-innovation-grid { grid-template-columns: 1fr; }
+    .home-features-grid { gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+    .home-hero-section { height: 80vh; }
+    .home-hero-title { font-size: 2.5rem; }
+    .home-hero-subtitle { font-size: 1.1rem; }
+    .home-section-title, .home-section-title-light { font-size: 2rem; }
+    .home-features-grid { flex-direction: column; align-items: center; }
+    .home-feature-number { font-size: 2.5rem; }
+    .home-innovation-card { margin-bottom: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .home-container { padding: 0 1rem; }
+    .home-hero-section { height: 70vh; }
+    .home-hero-title { font-size: 2rem; }
+    .home-hero-subtitle { font-size: 1rem; }
+    .home-hero-buttons { flex-direction: column; align-items: center; }
+    .home-btn-primary, .home-btn-secondary { width: 80%; }
+    .home-services-overview, .home-innovation, .home-cta-section { padding: 3rem 0; }
+    .home-why-choose-us { padding: 4rem 0; }
+    .home-service-card, .home-innovation-card { padding: 2rem 1.5rem; }
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

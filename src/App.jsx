@@ -9,6 +9,10 @@ import News from "./components/views/News";
 import Services from "./components/views/Services";
 import Contact from "./components/views/Contact";
 import FAQ from "./components/views/FAQ";
+import TermsOfService from "./components/views/TermsOfUse";
+import CookiePolicy from "./components/views/CookiePolicyFile";
+import PrivacyPolicy from "./components/views/PrivacyPolicyFile";
+import NotFound from "./components/views/NotFound";
 
 function App() {
 
@@ -26,6 +30,10 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/faq" element={<FAQ />} />
+                <Route path="/terms" element={<TermsOfService />} />
+                <Route path="/cookies" element={<CookiePolicy />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
           </div>
